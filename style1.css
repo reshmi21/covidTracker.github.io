@@ -1,0 +1,165 @@
+
+*{
+  font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+  font-stretch: expanded;
+  font-size-adjust: 0.58;
+}
+.bg-chat{
+  background:#522d5b;
+}	
+
+.heading {
+  color: #fff;
+  margin: 30px;
+  font-weight: 600;
+}
+
+		.inbox_msg {
+			margin-top:5px;
+		  border: 1px solid #c4c4c4;
+		  clear: both;
+		  overflow: hidden;
+			
+		}
+		.top_spac{ margin: 20px 0 0;}
+
+		.chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
+		.chat_ib h5 span{ font-size:13px; float:right;}
+		.chat_ib p{ font-size:14px; color:#989898; margin:auto}
+		.chat_ib {
+		  float: left;
+		  padding: 0 0 0 15px;
+		  width: 88%;
+		}
+
+		.inbox_chat { height: 650px; overflow-y: scroll;}
+
+
+		
+		.received_msg {
+		  display: inline-block;
+		  padding: 0 0 0 10px;
+		  vertical-align: top;
+		  width:56%;
+		  overflow:hidden;
+		 }
+		 .received_withd_msg p{
+		  background: #e7d39f none repeat scroll 0 0;
+		  border-radius: 3px;
+		  color:#fb7b6b;
+		  font-size: 16px;
+		  margin: 5px;
+		  padding: 5px 10px 5px 12px;
+		  width: 100%;
+		}
+		 .received_withd_msg #start{
+		  background: #e7d39f none repeat scroll 0 0;
+		  border-radius: 3px;
+		  color:#fb7b6b;
+		  font-size: 16px;
+		  margin-bottom: 5px;
+		  padding: 5px 10px 5px 12px;
+		  width: 50%;
+		   position: absolute; 
+             bottom: 0px;
+				
+            } 
+		.received_withd_msg .checkboxes {
+		  background: #e7d39f none repeat scroll 0 0;
+		  border-radius: 3px;
+		  color:#fb7b6b;
+		  font-size: 16px;
+		  margin: 5px;
+		  padding: 5px 10px 5px 12px;
+		  width: 100%;
+		  
+		}
+	 .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 20px;
+  background-color: #eee;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+		.received_withd_msg { width: 100%;
+		   overflow:hidden;}
+		.mesgs {
+		  float: left;
+		  padding: 40px;
+		}
+
+		 .sent_msg p {
+		  background: #fb7b6b none repeat scroll 0 0;
+		  border-radius: 3px;
+		  font-size: 16px;
+		  font-weight:500;
+		  margin: 0; color:#fff;
+		  padding: 5px 10px 5px 12px;
+		  width:100%;
+		}
+		.outgoing_msg{ overflow:hidden; 
+		margin:26px 0 26px;}
+		
+		.sent_msg {
+      float: right;
+		  width: 25%;
+      text-align:right;
+	 
+		}
+		
+		.messaging { background:#d7385e}
+

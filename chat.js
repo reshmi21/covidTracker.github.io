@@ -59,8 +59,6 @@ $('#s1').hide();
   high=0;
 $('#checkboxes1 input:checked').each(function() {
   selected1.push($(this).attr('name'));
-<<<<<<< HEAD
-
   $('#s1').html(selected1+" ");
 $('#s1').show();
 if($(this).attr('name')!=="none of above")
@@ -74,18 +72,12 @@ $('#s1').show();
 if($(this).attr('name')!=='none of above')
 {
 high=high+1;
->>>>>>> 894567b4271d2ac5fd0619a3ee3f44eff8bce3d0
 }
 else
 high=0;
 });
  $('#r2').show();
   $('#checkboxes2').show();
-<<<<<<< HEAD
-  //console.log(high);
-=======
-  console.log(high);
->>>>>>> 894567b4271d2ac5fd0619a3ee3f44eff8bce3d0
 });
 
 $('#checkboxes2 input[type=checkbox]').change(function() { 
@@ -168,7 +160,6 @@ $('#s6').show();
  $('#message2').html("<strong>You are safe! stay safe maintain social distancing!</strong>");
  $('#message2').show();
  }
-<<<<<<< HEAD
  if(high==0)
  {
  $('#message2').html("<strong>You have mild symtomps!No need to panic,consult doctor if persists for more than 7 days!</strong>");
@@ -177,11 +168,9 @@ $('#s6').show();
   if(high==1)
   {
  $('#message2').html("<strong>You have symptoms of concern!</strong><b> Consult a nearby doctor or call helpline no:<a href='https://www.mohfw.gov.in/'>1075</a></b>");
-=======
   if(high==1)
   {
  $('#message2').html("<strong>You have symptoms!</strong><b> Consult a nearby doctor or call helpline no:<a href='https://www.mohfw.gov.in/'>1075</a></b>");
->>>>>>> 894567b4271d2ac5fd0619a3ee3f44eff8bce3d0
  $('#message2').show();
  }
   if(high>=4)

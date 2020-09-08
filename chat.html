@@ -1,0 +1,152 @@
+<html>
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	
+	<link rel="stylesheet" href="style1.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	
+
+</head>
+<body class="bg-chat">
+<div class="container">
+<h3 class="heading text-center">Covid19 Tracker</h3>
+<div class="messaging">
+      <div class="inbox_msg">
+	  <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="i1">Welcome to the Covid19 tracker application</p>
+				  </div>
+				  <div class="received_withd_msg">
+                  <p id="i2">The user will be asked few questions where they have to tick the correct option</p>
+				  </div>
+				  <div class="received_withd_msg">
+                  <p id="i3">The user shall ensure the given answers are correct based on their health status</p>
+				  </div>
+				  <div class="received_withd_msg">
+                 <button class="btn btn-default" id="start" onclick="Run()">Click to start </button>
+				  </div>
+				  </div>
+				  </div>
+            <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="r1">Do you have any of the symptoms?</p>
+				  <div class="checkboxes" id="checkboxes1" onclick="Run()">
+    <label class="container">cough<input id="chkbx_0" type="checkbox" name="cough"><span class="checkmark"></span></label>
+    <label class="container">fever<input id="chkbx_1" type="checkbox" name="fever"><span class="checkmark"></span></label>
+   <label class="container">breathing trouble<input id="chkbx_2" type="checkbox" name="breathing trouble"><span class="checkmark"></span></label>
+	<label class="container">joint pain <input id="chkbx_3" type="checkbox" name="joint pain"><span class="checkmark"></span></label>
+	 <label class="container">diarrhoea<input id="chkbx_4" type="checkbox" name="diarrhoea"><span class="checkmark"></span></label>
+	 <label class="container">loss in smell and taste senses <input id="chkbx_5" type="checkbox" name="loss in smell and taste senses">
+	 <span class="checkmark"></span></label>
+    <label class="container">none of above<input id="chkbx_6" type="checkbox" name="none of above">
+	<span class="checkmark"></span></label>
+		</div>
+              </div>
+            </div>
+			</div>
+            <div class="outgoing_msg">
+              <div class="sent_msg" >
+			  <p id="s1"></p>
+			</div>
+            </div>
+            <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="r2">Do you have following ailments?</p>
+				  <div class="checkboxes" id="checkboxes2" onclick="Run()">
+	<label class="container">cardiac disease<input id="chkbx_0" type="checkbox" name="cardiac disaese"><span class="checkmark"></span></label>
+   <label class="container">diabetes<input id="chkbx_1" type="checkbox" name="diabetes"><span class="checkmark"></span></label>
+   <label class="container">lung disease  <input id="chkbx_2" type="checkbox" name="lung disease"><span class="checkmark"></span></label>
+   <label class="container">none of above<input id="chkbx_3" type="checkbox" name="none of above"><span class="checkmark"></span></label>
+                </div>
+              </div>
+            </div>
+			</div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p id="s2"></p>
+                </div>
+				</div>
+            <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="r3">Do you have a travel history(outside state/or country)?</p>
+                 <div class="checkboxes" id="checkboxes3" onclick="Run()">
+	<label class="container">Yes<input id="chkbx_0" type="checkbox" name="Yes"><span class="checkmark"></span></label>
+   <label class="container">No<input id="chkbx_1" type="checkbox" name="No"><span class="checkmark"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+		 <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p id="s3"></p>
+                </div>
+				</div>
+	       <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="r4">Are you a health care worker?</p>
+                 <div class="checkboxes" id="checkboxes4" onclick="Run()">
+	<label class="container">Yes<input id="chkbx_0" type="checkbox" name="Yes"><span class="checkmark"></span></label>
+    <label class="container">No<input id="chkbx_1" type="checkbox" name="No"><span class="checkmark"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+		 <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p id="s4"></p>
+                </div>
+				</div>	
+ <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="r5">Did you come in contact with a Covid19 postitive patient?</p>
+                 <div class="checkboxes" id="checkboxes5" onclick="Run()">
+	<label class="container">Yes<input id="chkbx_0" type="checkbox" name="Yes"><span class="checkmark"></span></label>
+   <label class="container">No<input id="chkbx_1" type="checkbox" name="No"><span class="checkmark"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+		 <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p id="s5"></p>
+                </div>
+				</div>	
+<div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="r6">Are you a former Covid19 postitive patient?</p>
+                 <div class="checkboxes" id="checkboxes6" onclick="Run()">
+	<label class="container">Yes<input id="chkbx_0" type="checkbox" name="Yes"/><span class="checkmark"></span></label>
+   <label class="container">No<input id="chkbx_1" type="checkbox" name="No"/><span class="checkmark"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+		 <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p id="s6"></p>
+                </div>
+				</div>	
+<div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p id="message1"><b>THANK YOU FOR TAKING THE TEST</b></p>
+					<p id="message2"></p>
+					</div>
+					</div>
+</div> 
+  </div>
+  <script src="chat.js">
+ 
+  
+  </script>
+  </body>
+    </html>

@@ -65,7 +65,6 @@ if($(this).attr('name')!=="none of above")
 {
 high=high+1;
 //console.log(high);
-=======
 //console.log(high);
   $('#s1').html(selected1+" ");
 $('#s1').show();
@@ -110,7 +109,6 @@ $('#r4').show();
   $('#checkboxes4').show();
    if(option3==='Yes')
    high++;
-
 
 });
 console.log(high);

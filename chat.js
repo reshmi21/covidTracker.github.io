@@ -51,32 +51,34 @@ $('#s1').hide();
         }
   $('#start').click(function()
   {
+	  var selected1;
     $('#start').hide();
    $('#r1').show();
    $('#checkboxes1').show();
   $('#checkboxes1 input[type=checkbox]').change(function() { 
-  var selected1=[];
+  selected1=[];
   high=0;
 $('#checkboxes1 input:checked').each(function() {
-  selected1.push($(this).attr('name'));
-  $('#s1').html(selected1+" ");
-$('#s1').show();
-if($(this).attr('name')!=="none of above")
-{
-high=high+1;
 //console.log(high);
 //console.log(high);
+
+selected1.push($(this).attr('name'));
   $('#s1').html(selected1+" ");
-$('#s1').show();
+  $('#s1').show();
 if($(this).attr('name')!=='none of above')
 {
 high=high+1;
 }
 else
+{
 high=0;
+ $(this).siblings('input:checkbox').removeAttr('checked');
+//siblings("input[type='checkbox']").prop("disabled", true); 
+}
 });
  $('#r2').show();
   $('#checkboxes2').show();
+  //console.log(high);
 });
 
 $('#checkboxes2 input[type=checkbox]').change(function() { 
@@ -90,13 +92,11 @@ if($(this).attr('name')!=='none of above')
 {
 high++;
 }
-
 });
 console.log(high);
 $('#r3').show();
   $('#checkboxes3').show();
 });
-
 
 $('#checkboxes3 input[type=checkbox]').change(function() { 
  
@@ -109,7 +109,6 @@ $('#r4').show();
   $('#checkboxes4').show();
    if(option3==='Yes')
    high++;
-
 });
 console.log(high);
 });
@@ -152,41 +151,39 @@ $('#s6').show();
   //$('#checkboxes6').show();
    if(option6==='Yes')
    high++;
+
+console.log(selected1);
  $('#message1').show();
  if(high<0)
  {
+	 $('#message1').show();
  $('#message2').html("<strong>You are safe! stay safe maintain social distancing!</strong>");
  $('#message2').show();
  }
- if(high==0)
+ if((high==0)&&(selected1.length>=1))
  {
+	 $('#message1').show();
  $('#message2').html("<strong>You have mild symtomps!No need to panic,consult doctor if persists for more than 7 days!</strong>");
  $('#message2').show();
  }
   if(high==1)
   {
- $('#message2').html("<strong>You have symptoms of concern!</strong><b> Consult a nearby doctor or call helpline no:<a href='https://www.mohfw.gov.in/'>1075</a></b>");
-  if(high==1)
-  {
+	$('#message1').show();
  $('#message2').html("<strong>You have symptoms!</strong><b> Consult a nearby doctor or call helpline no:<a href='https://www.mohfw.gov.in/'>1075</a></b>");
  $('#message2').show();
  }
   if(high>=4)
   {
+	  $('#message1').show();
  $('#message2').html("<strong>You are at risk!</strong><b> Call the helpline no:<a href='https://www.mohfw.gov.in/'>1075</a> and get your test done</b>");
  $('#message2').show();
  }
   if((high>=2)&&(high<=4))
   {
+	  $('#message1').show();
  $('#message2').html("<strong>You are a bit vurnerable to the infection</strong>! <b>isolate yourself at home or call helpline no:<a href='https://www.mohfw.gov.in/'>1075</a></b>");
 $('#message2').show();
 }
 });
 });
-
- 
-
-//console.log(low);
-//console.log(mid);
-//console.log(high);
 });
